@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+////////////Задача 1
+        var arrVow = ['а', 'о', 'у', 'ы', 'э', 'я', 'е', 'ё', 'ю', 'и'];
+        var vowels = '';
+        const string = "Привет! Как дела?";
+        function getVowels(string) {
+            for (var n=0; n < string.length; n++) {
+                for (var i=0; i < arrVow.length; i++) {
+                    if (string[n] == arrVow[i]) {
+                        vowels = vowels + arrVow[i];
+                    }
+                }
+            }
+            return vowels;
+        }
+        console.log(getVowels(string));
+
+////////////Задача 2
+        const workers = [
+            {"name":"John","salary":500},
+            {"name":"Mike","salary":1300},
+            {"name":"Henry","salary":1100},
+            {"name":"George","salary":900},
+            {"name":"Mishel","salary":1900},
+            {"name":"Hank","salary":1001},]
+        var nameOfWorkers = [];
+        function getWorthyWorkers(workers) {
+            for (var i = 0; i < workers.length; i++){
+                var salary = workers[i].salary ;
+                if (salary > 1000) {
+                        nameOfWorkers.push(workers[i].name); 
+                }
+            }
+            return nameOfWorkers
+        }
+        console.log(getWorthyWorkers(workers));
+////////////Задача 3
+        const path = "/users/download/index.html";
+        function isHtml(path) {
+            if (path[path.length-4] + path[path.length-3] + path[path.length-2] + path[path.length-1] == 'html') {
+                var x = 'True'
+            } else {
+                x = 'False'
+            }
+            return x;
+        }
+        console.log(isHtml(path));
+////////////Задача 4
+        var a;
+        const mixedArray = [12,18,55,3,13,74,14,66,15,22,4];
+        var evenArray = [];
+
+        function evenrOrNot(a) {
+            if (a%2 == 0 ) {
+                var y = 0;
+            } else {
+                y = 1 ;
+            }
+            return y
+        }
+        function filter(mixedArray, evenrOrNot) {
+            for (i=0; i < mixedArray.length; i++) {
+                a = mixedArray[i];
+                if (evenrOrNot(a) == 0) {
+                    evenArray.push(mixedArray[i]) 
+                }
+            }
+            return evenArray
+        }
+        console.log(filter(mixedArray, evenrOrNot));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
